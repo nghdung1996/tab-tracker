@@ -1,6 +1,6 @@
 <template>
   <div class="col-sm-6 offset-sm-3 text-left form">
-    <h2>Register</h2>
+    <h2>Login</h2>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -27,7 +27,7 @@ export default {
   methods: {
     async register () {
       try {
-        await AuthenticationService.register({
+        await AuthenticationService.login({
           email: this.email,
           password: this.password
         })

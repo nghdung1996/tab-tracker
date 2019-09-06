@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <page-header/>
-    <div class="container">
+    <img src="../src/assets/logo.png" alt="">
+    <div class="container-fluid">
       <router-view></router-view>
     </div>
   </div>
@@ -22,7 +23,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 </style>

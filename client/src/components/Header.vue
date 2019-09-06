@@ -7,15 +7,17 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Browse</a>
+            <router-link v-if="$store.state.isUserLoggedIn" tag="li" class="nav-item" :to="{name: 'Songs'}"><a class="nav-link">Songs</a></router-link>
           </li>
-        </ul> -->
-
+        </ul>
         <ul class="navbar-nav ml-auto">
-          <router-link tag="li" class="nav-item" :to="{name: 'Login'}"><a class="nav-link">Login</a></router-link>
-          <router-link tag="li" class="nav-item" :to="{name: 'Register'}"><a class="nav-link">Sign Up</a></router-link>
+          <router-link v-if="!$store.state.isUserLoggedIn" tag="li" class="nav-item" :to="{name: 'Login'}"><a class="nav-link">Login</a></router-link>
+          <router-link v-if="!$store.state.isUserLoggedIn" tag="li" class="nav-item" :to="{name: 'Register'}"><a class="nav-link">Sign Up</a></router-link>
+          <li class="nav-item" v-if="$store.state.isUserLoggedIn">
+            <a class="nav-link" @click="logout" style="cursor:pointer">Log Out</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -24,7 +26,13 @@
 
 <script>
 export default {
-
+  methods: {
+    logout () {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push('/')
+    }
+  }
 }
 </script>
 

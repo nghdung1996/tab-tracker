@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Songs from '@/components/Songs'
+import Songs from '@/components/songs/Index'
 import CreateSong from '@/components/CreateSong'
 import ViewSong from '@/components/ViewSong'
 import EditSong from '@/components/EditSong'
@@ -46,6 +46,10 @@ export default new Router({
       path: '/songs/:id/edit',
       name: 'editSong',
       component: EditSong
+    },
+    {
+      path: '*',
+      component: Songs
     }
   ]
 })

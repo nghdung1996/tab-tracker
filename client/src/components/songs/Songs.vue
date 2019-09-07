@@ -17,19 +17,20 @@
 </template>
 
 <script>
-import Panel from '../components/Panel'
-import SongsServeice from '../services/SongsServeice'
+import SongsServeice from '../../services/SongsServeice'
 export default {
   data () {
     return {
-      songs: []
+      songs: null
     }
   },
-  async mounted () {
-    this.songs = (await SongsServeice.index()).data
-  },
-  components: {
-    Panel
+  watch: {
+    '$route.query.search': {
+      immediate: true,
+      async handler (value) {
+        this.songs = (await SongsServeice.index(value)).data
+      }
+    }
   }
 }
 </script>

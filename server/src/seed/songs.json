@@ -1,0 +1,32 @@
+[
+  {
+		"title": "Bang Bang Bang",
+	    "artist": "Bigbang",
+	    "genre": "Pop",
+	    "album": "Made",
+	    "albumImage": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/BIGBANG_-_BANG_BANG_BANG.jpeg/220px-BIGBANG_-_BANG_BANG_BANG.jpeg",
+	    "youtubeId": "2ips2mM7Zqw",
+	    "lyrics": "",
+	    "tab": ""
+	},
+	{
+		"title": "Really",
+	    "artist": "Winner",
+	    "genre": "Pop",
+	    "album": "Fate",
+	    "albumImage": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/BIGBANG_-_BANG_BANG_BANG.jpeg/220px-BIGBANG_-_BANG_BANG_BANG.jpeg",
+	    "youtubeId": "2ips2mM7Zqw",
+	    "lyrics": "",
+	    "tab": ""
+	},
+	{
+		"title": "Love Scenario",
+	    "artist": "iKon",
+	    "genre": "Pop",
+	    "album": "Return",
+	    "albumImage": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/BIGBANG_-_BANG_BANG_BANG.jpeg/220px-BIGBANG_-_BANG_BANG_BANG.jpeg",
+	    "youtubeId": "2ips2mM7Zqw",
+	    "lyrics": "",
+	    "tab": ""
+	}
+]

@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import Panel from '../components/Panel'
 import SongsServeice from '../services/SongsServeice'
 export default {
   data () {
@@ -61,9 +60,6 @@ export default {
         lyrics: ''
       }
     }
-  },
-  components: {
-    Panel
   },
   methods: {
     async createSong () {

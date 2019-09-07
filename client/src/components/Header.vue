@@ -9,7 +9,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link v-if="$store.state.isUserLoggedIn" tag="li" class="nav-item" :to="{name: 'Songs'}"><a class="nav-link">Songs</a></router-link>
+            <router-link tag="li" class="nav-item" :to="{name: 'Songs'}"><a class="nav-link">Songs</a></router-link>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">

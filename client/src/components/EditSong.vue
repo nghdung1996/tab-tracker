@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import Panel from '../components/Panel'
 import SongsServeice from '../services/SongsServeice'
 export default {
   data () {
@@ -62,9 +61,6 @@ export default {
       }
     }
   },
-  components: {
-    Panel
-  },
   async mounted () {
     const songId = this.$store.state.route.params.id
     this.song = (await SongsServeice.viewSong(songId)).data
@@ -74,7 +70,26 @@ export default {
     async editSong () {
       try {
         await SongsServeice.editSong(this.song)
-        this.$router.push({name: 'editSong', params: { id: this.song.id }})
+        this.$swal.fire({
+          title: 'Are you sure?',
+          // text: "You won't be able to revert this!",
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, save it!'
+        }).then((result) => {
+          if (result.value) {
+            this.$router.push({name: 'Songs'})
+            this.$swal.fire({
+              position: 'top-end',
+              type: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 500
+            })
+          }
+        })
       } catch (error) {
         console.log(error)
       }
